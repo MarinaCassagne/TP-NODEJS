@@ -35,7 +35,7 @@ exports.createProduct = async (req, res) => {
 // 2.getAllProducts(req,res)
 exports.getAllProducts = async (req, res) => {
   /* try {
-    //Récupération de tous les produits stockés en base
+    // Récupération de tous les produits stockés en base
     const products = await Product.find();
     res.status(200).send(productListView(req, products));
   } catch (error) {
