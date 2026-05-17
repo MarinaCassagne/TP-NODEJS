@@ -22,16 +22,15 @@ const blog = new Schema({
 });
 */
 
-// Using ES6 imports
 import mongoose from 'mongoose';
 
-const productSchema = new Schema({
-    
+const productSchema = new mongoose.Schema({
+
     name: {
         type: String,
         required: true,
     },
-        
+
     description: {
         type: String,
     },
@@ -39,8 +38,8 @@ const productSchema = new Schema({
     price: {
         type: Number,
         required: true,
-    },    
-    
+    },
+
     quantity: {
         type: Number,
         required: true,
@@ -49,9 +48,9 @@ const productSchema = new Schema({
 
     createdAt:  {
         type: Date,
-        default: Date.now(),
+        default: Date.now,
     },
- 
+
 })
 
 /*
@@ -62,11 +61,10 @@ MODÈLE
 Exemple comment déclarer un modèle :
 const Blog = mongoose.model('Blog', blog);
 
-Les modèles utilisent votre schéma et l'appliquent à chaque document de leur collection. 
+Les modèles utilisent votre schéma et l'appliquent à chaque document de leur collection.
 Ils sont responsables de toutes les interactions entre les documents, telles que les opérations de création, de lecture, de mise à jour et de suppression (CRUD).
 
 */
 
 const Product = mongoose.model("Product", productSchema);
-module.exports = Product;
-
+export default Product;

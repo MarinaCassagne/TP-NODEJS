@@ -1,2 +1,2 @@
-MonGODB_URL = mongodb+srv://marinacassagne_db_user:YPSQVFronLSXy6qr@tpnodejs.bviawx9.mongodb.net/?appName=TPNodeJS;
-port = 3002;
+MonGODB_URL = "mongodb+srv://marinacassagne_db_user:YPSQVFronLSXy6qr@tpnodejs.bviawx9.mongodb.net/?appName=TPNodeJS"
+port = 3002

@@ -7,9 +7,9 @@ function productListView(req, ListProduct) {
                 <title>Document</title>
             </head>
             <body>
-                
-                ${ListenProduct.map
-                (product => 
+
+                ${ListProduct.map
+                (product =>
                     //.map permet faire un tableau du style .map → [<li></li>,<li></li>,<li></li>]
                         {
                         return `
@@ -23,12 +23,12 @@ function productListView(req, ListProduct) {
                         `
                         }
                     //permet de mettre en chaine de caractères le tableau créé par .map il remplace les , par un espace ""
-                ).join("")}; 
-                
+                ).join("")}
+
             </body>
-            
+
         </html>
         `;
 }
 
-module.exports = productListView;
+export default productListView;

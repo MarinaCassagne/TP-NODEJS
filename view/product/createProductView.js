@@ -45,4 +45,4 @@ function createProductView(req) {
     `;
 }
 
-module.exports = createProductView;
+export default createProductView;
