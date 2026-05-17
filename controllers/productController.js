@@ -29,14 +29,14 @@ export const createProduct = async (req, res) => {
 
 // 2.getAllProducts(req,res)
 export const getAllProducts = async (req, res) => {
-  /* try {
+  try {
     // Récupération de tous les produits stockés en base
     const products = await Product.find();
     res.status(200).send(productListView(req, products));
   } catch (error) {
     res.status(400).json({ message: error.message });
-  }*/
-  console.log("je suis la");
+  }
+  //console.log("je suis la");
 };
 
 //3.getProductById(req, res)
@@ -56,7 +56,7 @@ export const getProductById = async (req, res) => {
 export const updateProduct = async (req, res) => {
   try {
     // Met à jour un produit existant
-    const product = await Product.findByIdAndUpdate(req.params, req.body, {
+    const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });
     //Retourne 404 si l'ID n'existe pas
@@ -72,7 +72,7 @@ export const updateProduct = async (req, res) => {
 export const deleteProduct = async (req, res) => {
   try {
     // Supprime un produit existant
-    const product = await Product.findByIdAndDelete(req.params);
+    const product = await Product.findByIdAndDelete(req.params.id);
     //Retourne 404 si l'ID n'existe pas
     if (!product) return res.status(404).json({ message: "Product not found" });
     //Retourne 200 si supprimé
